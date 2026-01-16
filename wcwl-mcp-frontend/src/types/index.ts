@@ -17,6 +17,19 @@ export interface ToolDefinition {
   inputSchema?: Record<string, unknown>
 }
 
+export interface ToolInfo {
+  name: string
+  description: string
+  category: string
+  status: 'DRAFT' | 'PENDING_REVIEW' | 'PUBLISHED' | 'OFFLINE' | 'REJECTED'
+  statusDisplay: string
+  sourceType: 'BUILTIN' | 'DYNAMIC'
+  createdBy: string
+  createdAt: string
+  updatedBy: string
+  updatedAt: string
+}
+
 export interface ParamDefinition {
   name: string
   type: 'string' | 'integer' | 'number' | 'boolean' | 'array' | 'object'
@@ -34,6 +47,7 @@ export interface ToolRegisterRequest {
   headers?: Record<string, string>
   timeout?: number
   requiredRoles?: string[]
+  category?: string
 }
 
 // API响应类型
@@ -50,5 +64,5 @@ export interface ManifestResponse {
 
 export interface ToolListResponse {
   count: number
-  tools: { name: string; description: string }[]
+  tools: ToolInfo[]
 }

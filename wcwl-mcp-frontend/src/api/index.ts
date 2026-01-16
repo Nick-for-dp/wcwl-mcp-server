@@ -69,7 +69,13 @@ export const adminApi = {
   registerTool: (data: ToolRegisterRequest) => api.post('/admin/tools/register', data),
   
   // 注销工具
-  unregisterTool: (name: string) => api.delete(`/admin/tools/${name}`)
+  unregisterTool: (name: string) => api.delete(`/admin/tools/${name}`),
+
+  // 上架工具
+  publishTool: (name: string) => api.post(`/admin/tools/${name}/publish`),
+
+  // 下架工具
+  offlineTool: (name: string) => api.post(`/admin/tools/${name}/offline`)
 }
 
 export default api

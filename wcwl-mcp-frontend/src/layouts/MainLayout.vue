@@ -32,6 +32,10 @@
             <el-icon><Plus /></el-icon>
             <span>注册工具</span>
           </el-menu-item>
+          <el-menu-item v-if="userStore.isAdmin" index="/manage">
+            <el-icon><Setting /></el-icon>
+            <span>工具管理</span>
+          </el-menu-item>
         </el-menu>
       </el-aside>
       

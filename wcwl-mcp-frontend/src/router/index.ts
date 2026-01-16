@@ -28,6 +28,12 @@ const router = createRouter({
           name: 'ToolRegister',
           component: () => import('@/views/ToolRegister.vue'),
           meta: { requiresAdmin: true }
+        },
+        {
+          path: 'manage',
+          name: 'ToolManage',
+          component: () => import('@/views/ToolManage.vue'),
+          meta: { requiresAdmin: true }
         }
       ]
     }

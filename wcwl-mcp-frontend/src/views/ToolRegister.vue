@@ -14,6 +14,16 @@
           <el-input v-model="form.description" type="textarea" :rows="2" placeholder="工具功能描述" />
         </el-form-item>
 
+        <el-form-item label="分类" prop="category">
+          <el-select v-model="form.category" placeholder="选择工具分类" style="width: 200px">
+            <el-option label="数据查询" value="data_query" />
+            <el-option label="仓库管理" value="warehouse" />
+            <el-option label="贸易服务" value="trade" />
+            <el-option label="系统工具" value="system" />
+            <el-option label="其他" value="custom" />
+          </el-select>
+        </el-form-item>
+
         <el-form-item label="服务端点" prop="endpoint">
           <el-input v-model="form.endpoint" placeholder="http://api.example.com/path" />
         </el-form-item>
@@ -95,7 +105,8 @@ const form = reactive<ToolRegisterRequest>({
   endpoint: '',
   method: 'POST',
   params: [createEmptyParam()],
-  timeout: 30000
+  timeout: 30000,
+  category: 'custom'
 })
 
 const rules: FormRules<ToolRegisterRequest> = {
