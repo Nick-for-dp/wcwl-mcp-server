@@ -1,0 +1,48 @@
+# ==================== IDE ====================
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+
+# ==================== 系统文件 ====================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==================== 环境配置 ====================
+.env
+.env.local
+.env.production
+
+# ==================== 敏感配置文件 ====================
+# 生产环境配置（包含密钥、密码等）
+**/application-prod.yml
+**/application-prod.properties
+**/application-local.yml
+**/application-local.properties
+
+# 如需忽略所有yml配置，取消下行注释
+# **/*.yml
+
+# ==================== 日志 ====================
+*.log
+logs/
+
+# ==================== Java/Maven ====================
+target/
+*.class
+*.jar
+*.war
+
+# ==================== Node.js ====================
+node_modules/
+dist/
+.npm
+.pnpm-store/
+
+# ==================== 临时文件 ====================
+*.tmp
+*.temp
+*.bak
+*~
