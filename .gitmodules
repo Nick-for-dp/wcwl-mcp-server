@@ -1,0 +1,3 @@
+[submodule "wcwl-mcp-gateway"]
+	path = wcwl-mcp-gateway
+	url = https://github.com/Nick-for-dp/wcwl-mcp-gateway.git
